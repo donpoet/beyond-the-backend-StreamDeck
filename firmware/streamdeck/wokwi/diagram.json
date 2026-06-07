@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "author": "Beyond The Backend",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -60.6, "left": -189.2, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 211.2, "left": -580.76, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 207.8,
+      "left": -345.6,
+      "attrs": { "color": "red", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 275,
+      "left": -422.4,
+      "attrs": { "color": "yellow", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 342.2,
+      "left": -345.6,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 275,
+      "left": -259.2,
+      "attrs": { "color": "blue", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": 275,
+      "left": -345.6,
+      "attrs": { "color": "black", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:0", "btn1:2.l", "red", [ "h0" ] ],
+    [ "esp:GND.2", "btn1:1.l", "#8f4814", [ "v-19.2" ] ],
+    [ "esp:GND.2", "btn5:1.l", "#8f4814", [ "v28.8", "h134.4" ] ],
+    [ "esp:GND.2", "btn2:1.l", "#8f4814", [ "v48", "h57.6" ] ],
+    [ "esp:GND.2", "btn4:1.l", "#8f4814", [ "v19.2", "h220.8" ] ],
+    [ "esp:GND.2", "btn3:1.l", "#8f4814", [ "v0" ] ],
+    [ "esp:4", "btn2:2.l", "gold", [ "h0" ] ],
+    [ "esp:16", "btn3:2.l", "green", [ "h0" ] ],
+    [ "esp:17", "btn4:2.l", "blue", [ "h0" ] ],
+    [ "esp:5", "btn5:2.l", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
