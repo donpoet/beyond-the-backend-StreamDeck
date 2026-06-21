@@ -1,10 +1,11 @@
 #include <Arduino.h>
+#include <SSD1306Ascii.h>
 
 const int button_pin0 = 0; // Red
 const int button_pin1 = 4; // Yellow
-const int button_pin2 = 16; // Green
-const int button_pin3 = 17; // Blue
-const int button_pin4 = 5; // Black 
+const int button_pin2 = 12; // Green
+const int button_pin3 = 14; // Blue
+const int button_pin4 = 5; // Black
 
 boolean button0Released = true;
 boolean button1Released = true;
